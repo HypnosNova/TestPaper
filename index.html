@@ -1,0 +1,307 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<script src="js/vendor/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/head.css" />
+		<link rel="stylesheet" href="css/foundation.css" />
+		<link rel="stylesheet" type="text/css" href="css/upmenu.css" />
+		<link rel="stylesheet" type="text/css" href="css/jilian.css" />
+		<script src="js/vendor/modernizr.js"></script>
+
+		<script type="text/javascript">
+			try {
+				Typekit.load();
+			} catch (e) {}
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/menutop.css" />
+		<script src="js/validate.js" type="text/javascript" charset="UTF-8"></script>
+	</head>
+
+	<body style="background-color: #fff;">
+
+		<div class="off-canvas-wrap" data-offcanvas>
+			<div class="inner-wrap">
+				<section class="main-section" style="background-color: #fff;">
+					<div class="row" style="margin-top: 20px;">
+						<form>
+							<h3>IT行业人员健康调查问卷（样卷，Ver0.1。只是样品，没有提交功能）</h3>
+							<h5>说明：本调查问卷不记名，目的在于了解IT行业员工健康状况的情况，以及了解工作情况对于身体、心理健康的影响。</h5>
+							<table style="line-height: 48px;width: 100%;">
+								<tbody>
+									<tr style="padding: 0 20px;">
+										<td width="130">
+											<div style="font-size: 18px;margin-top: 10px;"><b>基本信息</b>
+											</div>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;">性别：</span>
+										</td>
+										<td>
+											<input type="radio" name="radiog_lite" id="radio1" class="css-checkbox" checked="checked" onclick="chooseMale();" />
+											<label for="radio1" class="css-label radGroup1" style="margin-top: 5px;">男</label>
+											<input type="radio" name="radiog_lite" id="radio2" class="css-checkbox" onclick="chooseFemale();" />
+											<label for="radio2" class="css-label radGroup1" style="margin-top: 5px;">女</label>
+										</td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;">角色身份：</span>
+										</td>
+										<td>
+											<select id="identity" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="技术人员">技术人员</option>
+												<option value="管理人员">管理人员</option>
+												<option value="其他">其他</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;">年龄段：</span>
+										</td>
+										<td>
+											<select id="ageType" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="小于20">小于20岁</option>
+												<option value="20至3029">20~29</option>
+												<option value="30至39">30~39</option>
+												<option value="40至49">40~49</option>
+												<option value="超过50">超过50岁</option>
+											</select>
+										</td>
+									</tr>
+									
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;">税前月工资范围：</span>
+										</td>
+										<td>
+											<select id="salaryType" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="小于4K">小于4K</option>
+												<option value="4K~6K">4K~6K</option>
+												<option value="6K~8K">6K~8K</option>
+												<option value="8K~10K">8K~10K</option>
+												<option value="10K~15K">10K~15K</option>
+												<option value="15K~20K">15K~20K</option>
+												<option value="20K以上">20K以上</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div style="position: absolute;margin-top: -10px;margin-bottom: 10px;font-size: 18px;"><b>工作情况</b>
+											</div>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;">平均每周加班小时数：</span>
+										</td>
+										<td>
+											<select id="overWorkType" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="几乎不加班">几乎没有加过班</option>
+												<option value="少于2小时">小于2小时</option>
+												<option value="2~5小时">2~5小时K</option>
+												<option value="5~10小时">5~10小时</option>
+												<option value="10~15小时">10~15小时</option>
+												<option value="15~20小时">15~20小时</option>
+												<option value="20小时以上">20小时以上</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;">工作压力情况：</span>
+										</td>
+										<td>
+											<select id="pressType" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="轻松">轻松</option>
+												<option value="一般">一般</option>
+												<option value="有较多压力">有较多压力</option>
+												<option value="压力山大">压力山大</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;">工作对家庭生活的影响：</span>
+										</td>
+										<td>
+											<select id="influenceType" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="无影响">无影响</option>
+												<option value="偶尔有影响">偶尔有影响</option>
+												<option value="影响蛮大了">影响蛮大了</option>
+												<option value="完全顾不上家了">完全顾不上家了</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div style="position: absolute;margin-top: -10px;font-size: 18px;"><b>健康状况</b>
+											</div>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;margin-top:-10px;">视力状况：</span>
+										</td>
+										<td>
+											<select id="influenceType" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="不近视">不近视</option>
+												<option value="近视但是度数保持不变">近视但是度数保持不变</option>
+												<option value="近视程度加深">近视程度加深</option>
+												<option value="近视加深程度很快">近视加深程度很快</option>
+												<option value="近视严重并且有其他眼部疾病出现">近视严重并且有其他眼部疾病出现</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;margin-top:-10px;">脊椎病情况：</span>
+										</td>
+										<td>
+											<input type="checkbox" value="健康" />
+											健康<br/>
+											<input type="checkbox" value="脖子酸胀" />
+											脖子酸胀<br/>
+											<input type="checkbox" value="脖子酸胀" />
+											颈椎间盘脱出<br/>
+											<input type="checkbox" value="腰酸背痛" />
+											腰酸背痛<br/>
+											<input type="checkbox" value="其他" />
+											其他<br/>
+										</td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;margin-top:-10px;">免疫力情况：</span>
+										</td>
+										<td>
+											<select id="influenceType" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="正常">正常</option>
+												<option value="生病次数较多">生病次数较多</option>
+												<option value="经常生病">经常生病</option>
+												<option value="弱不禁风">弱不禁风</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;margin-top:-10px;">负面心情问题：</span>
+										</td>
+										<td>
+											<input type="checkbox" value="无负面心情" />
+											无负面心情<br/>
+											<input type="checkbox" value="抑郁" />
+											抑郁<br/>
+											<input type="checkbox" value="焦虑" />
+											焦虑<br/>
+											<input type="checkbox" value="烦躁" />
+											烦躁<br/>
+											<input type="checkbox" value="缺乏耐心" />
+											缺乏耐心<br/>
+											<input type="checkbox" value="易怒" />
+											易怒<br/>
+										</td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;margin-top:-10px;">睡眠情况：</span>
+										</td>
+										<td>
+											<select id="influenceType" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="倒头就睡着">倒头就睡着</option>
+												<option value="需要较短时间能睡着">需要较短时间能睡着</option>
+												<option value="需要较长时间能睡着">需要较长时间能睡着</option>
+												<option value="失眠">失眠</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;margin-top:-10px;">晚上睡眠时长：</span>
+										</td>
+										<td>
+											<select id="influenceType" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="大于9小时">大于9小时</option>
+												<option value="7至9小时">7至9小时</option>
+												<option value="6至7小时">6至7小时</option>
+												<option value="少于6小时">少于6小时</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<div style="position: absolute;margin-top: -10px;font-size: 18px;"><b>其他</b>
+											</div>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;margin-top:-10px;">你了解万达全程吗：</span>
+										</td>
+										<td>
+											<select id="influenceType" style="overflow-y:auto;">
+												<option value="void">请选择</option>
+												<option value="不知道">万达全程是啥？能吃吗</option>
+												<option value="知道一点点">知道一点点</option>
+												<option value="有过深入了解">有过深入了解</option>
+												<option value="了如指掌">了如指掌</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><span><img src="img/star.png"/></span><span style="margin-left: 5px;margin-top:-10px;">你喜欢公司提供哪些设备或福利来改善自身健康问题：</span>
+										</td>
+										<td>
+											<textarea rows="4" cols="20" id="textinfo"></textarea>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+							
+						</form>
+						<a onclick="submitInfo();" class="button" style="width: 80%;border-radius: 10px;margin-left: 10%;">提交</a>
+						<!--<a onclick="submit2();" class="button" style="width: 100%;border-radius: 10px;">提萨达交</a>-->
+					</div>
+
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="js/foundation.min.js"></script>
+		<script src="js/upmenu.js" type="text/javascript" charset="UTF-8"></script>
+		<script>
+			$(document).foundation();
+		</script>
+
+	</body>
+	<script>
+		
+		
+	</script>
+
+</html>
